@@ -1,4 +1,4 @@
-# View bindings for ICanBoogie
+# bind-view
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
 [![Build Status](https://img.shields.io/travis/ICanBoogie/bind-view/master.svg)](http://travis-ci.org/ICanBoogie/bind-view)
