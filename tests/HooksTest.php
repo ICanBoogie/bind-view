@@ -11,6 +11,8 @@
 
 namespace ICanBoogie\Bindings\View;
 
+use ICanBoogie\Binding\View\Hooks;
+
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
 	public function test_controller_get_view()
@@ -53,5 +55,31 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 		$template_resolver = $view->template_resolver;
 		$this->assertInstanceOf('ICanBoogie\Render\TemplateResolver', $template_resolver);
 		$this->assertSame($template_resolver, $view->template_resolver);
+	}
+
+	/**
+	 * @expectedException \ICanBoogie\PropertyNotDefined
+	 */
+	public function test_get_template()
+	{
+		$target = $this
+			->getMockBuilder('ICanBoogie\Routing\Route')
+			->disableOriginalConstructor()
+			->getMock();
+
+		Hooks::get_template($target);
+	}
+
+	/**
+	 * @expectedException \ICanBoogie\PropertyNotDefined
+	 */
+	public function test_get_layout()
+	{
+		$target = $this
+			->getMockBuilder('ICanBoogie\Routing\Route')
+			->disableOriginalConstructor()
+			->getMock();
+
+		Hooks::get_layout($target);
 	}
 }

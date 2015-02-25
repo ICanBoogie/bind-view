@@ -11,6 +11,7 @@
 
 namespace ICanBoogie\Binding\View;
 
+use ICanBoogie\PropertyNotDefined;
 use ICanBoogie\Render;
 use ICanBoogie\Render\TemplateResolver;
 use ICanBoogie\Routing\Controller;
@@ -56,5 +57,31 @@ class Hooks
 	static public function view_lazy_get_template_resolver()
 	{
 		return clone Render\get_template_resolver();
+	}
+
+	/**
+	 * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
+	 * define a `template` property.
+	 *
+	 * @param $target
+	 *
+	 * @throws PropertyNotDefined
+	 */
+	static public function get_template($target)
+	{
+		throw new PropertyNotDefined([ 'template', $target ]);
+	}
+
+	/**
+	 * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
+	 * define a `layout` property.
+	 *
+	 * @param $target
+	 *
+	 * @throws PropertyNotDefined
+	 */
+	static public function get_layout($target)
+	{
+		throw new PropertyNotDefined([ 'layout', $target ]);
 	}
 }
