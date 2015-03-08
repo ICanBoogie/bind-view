@@ -24,7 +24,7 @@ class Hooks
 	 */
 
 	/**
-	 * Return a view for a controller.
+	 * Returns a view for a controller.
 	 *
 	 * @param Controller $controller
 	 *
