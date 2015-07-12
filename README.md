@@ -20,7 +20,7 @@ of [icanboogie/render][].
 
 Views are associated with controllers through the lazy getter `view`, thus a simple `$this->view`
 is all that is required to enable view features inside a controller. The view then waits for
-the `Controller::respond` event to perform its rendering.
+the `Controller::action` event to perform its rendering.
 
 The following example demonstrates how a query of some articles is set as the view content,
 a title is also added to the view variables:
@@ -28,11 +28,13 @@ a title is also added to the view variables:
 ```php
 <?php
 
-use ICanBoogie\Routing\ActionController;
+use ICanBoogie\Routing\Controller;
 
-class ArticlesController extends ActionController
+class ArticlesController extends Controller
 {
-	protected function action_index()
+	use Controller\ResourceTrait;
+
+	protected function index()
 	{
 		$this->view->content = $this->model->own->visible->ordered->limit(10);
 		$this->view['title'] = "Ten last articles";
@@ -57,7 +59,7 @@ For more information continue to the [View documentation](https://github.com/ICa
 
 ## Requirements
 
-The package requires PHP 5.4 or later.
+The package requires PHP 5.5 or later.
 
 
 

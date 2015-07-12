@@ -9,9 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Bindings\View;
+namespace ICanBoogie\Bindings\View\ControllerBindingsTest;
 
-$autoload = require __DIR__ . '/../vendor/autoload.php';
-$autoload->addPsr4('ICanBoogie\Bindings\View\ControllerBindingsTest\\', __DIR__ . '/ControllerBindingsTest');
+use ICanBoogie\Routing\Controller;
+use ICanBoogie\View\ControllerBindings as ViewBindings;
 
-\ICanBoogie\boot();
+abstract class BoundController extends Controller
+{
+	use ViewBindings;
+}

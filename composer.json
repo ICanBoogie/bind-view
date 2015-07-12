@@ -20,9 +20,10 @@
 	},
 
 	"require": {
-		"php": ">=5.4.0",
+		"php": ">=5.5.0",
 		"icanboogie/icanboogie": ">=2.3.0",
-		"icanboogie/view": ">=0.3.2"
+		"icanboogie/bind-render": ">=0.3.0",
+		"icanboogie/view": ">=0.5.0"
 	},
 
 	"autoload": {
