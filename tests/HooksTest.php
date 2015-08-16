@@ -12,48 +12,55 @@
 namespace ICanBoogie\Bindings\View;
 
 use ICanBoogie\Binding\View\Hooks;
+use ICanBoogie\Render\EngineCollection;
+use ICanBoogie\Render\EngineCollectionTest;
+use ICanBoogie\Render\TemplateResolver;
+use ICanBoogie\Routing\Controller;
+use ICanBoogie\Routing\Route;
+use ICanBoogie\View\ControllerBindings;
+use ICanBoogie\View\View;
 
 class HooksTest extends \PHPUnit_Framework_TestCase
 {
 	public function test_controller_get_view()
 	{
 		$controller = $this
-			->getMockBuilder('ICanBoogie\Routing\Controller')
+			->getMockBuilder(Controller::class)
 			->disableOriginalConstructor()
 			->setMethods([])
 			->getMockForAbstractClass();
 
-		/* @var $controller \ICanBoogie\Routing\Controller */
+		/* @var $controller Controller|ControllerBindings */
 		$view = $controller->view;
-		$this->assertInstanceOf('ICanBoogie\View\View', $view);
+		$this->assertInstanceOf(View::class, $view);
 		$this->assertSame($view, $controller->view);
 	}
 
 	public function test_view_get_engines()
 	{
 		$view = $this
-			->getMockBuilder('ICanBoogie\View\View')
+			->getMockBuilder(View::class)
 			->disableOriginalConstructor()
 			->setMethods([])
 			->getMockForAbstractClass();
 
-		/* @var $view \ICanBoogie\View\View */
+		/* @var $view View */
 		$engines = $view->engines;
-		$this->assertInstanceOf('ICanBoogie\Render\EngineCollection', $engines);
+		$this->assertInstanceOf(EngineCollection::class, $engines);
 		$this->assertSame($engines, $view->engines);
 	}
 
 	public function test_view_get_template_resolver()
 	{
 		$view = $this
-			->getMockBuilder('ICanBoogie\View\View')
+			->getMockBuilder(View::class)
 			->disableOriginalConstructor()
 			->setMethods([])
 			->getMockForAbstractClass();
 
-		/* @var $view \ICanBoogie\View\View */
+		/* @var $view View */
 		$template_resolver = $view->template_resolver;
-		$this->assertInstanceOf('ICanBoogie\Render\TemplateResolver', $template_resolver);
+		$this->assertInstanceOf(TemplateResolver::class, $template_resolver);
 		$this->assertSame($template_resolver, $view->template_resolver);
 	}
 
@@ -76,7 +83,7 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 	public function test_get_layout()
 	{
 		$target = $this
-			->getMockBuilder('ICanBoogie\Routing\Route')
+			->getMockBuilder(Route::class)
 			->disableOriginalConstructor()
 			->getMock();
 

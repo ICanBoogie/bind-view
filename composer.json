@@ -19,11 +19,13 @@
 		"source": "https://github.com/ICanBoogie/bind-view"
 	},
 
+	"minimum-stability": "dev",
+
 	"require": {
 		"php": ">=5.5.0",
-		"icanboogie/icanboogie": ">=2.3.0",
-		"icanboogie/bind-render": ">=0.3.0",
-		"icanboogie/view": ">=0.5.0"
+		"icanboogie/icanboogie": ">=2.4.0",
+		"icanboogie/bind-render": ">=0.4.0",
+		"icanboogie/view": ">=0.6.0"
 	},
 
 	"autoload": {

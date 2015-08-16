@@ -112,7 +112,7 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
 ## License
 
-**icanboogie/bind-iew** is licensed under the New BSD License - See the [LICENSE](LICENSE) file for details.
+**icanboogie/bind-view** is licensed under the New BSD License - See the [LICENSE](LICENSE) file for details.
 
 
 

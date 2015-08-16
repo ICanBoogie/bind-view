@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Bindings\View;
+namespace ICanBoogie;
 
 $autoload = require __DIR__ . '/../vendor/autoload.php';
 $autoload->addPsr4('ICanBoogie\Bindings\View\ControllerBindingsTest\\', __DIR__ . '/ControllerBindingsTest');
 
-\ICanBoogie\boot();
+boot();
