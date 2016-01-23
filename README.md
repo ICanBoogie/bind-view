@@ -22,6 +22,8 @@ Views are associated with controllers through the lazy getter `view`, thus a sim
 is all that is required to enable view features inside a controller. The view then waits for
 the `Controller::action` event to perform its rendering.
 
+The [View][] instance is created with the controller and the [Renderer][] instance returned by [`get_renderer()`][].
+
 The following example demonstrates how a query of some articles is set as the view content,
 a title is also added to the view variables:
 
@@ -42,7 +44,7 @@ class ArticlesController extends Controller
 }
 ```
 
-**Note:** The `model` getter is provided by the [icanboogie/module][] package, and is only
+> **Note:** The `model` getter is provided by the [icanboogie/module][] package, and is only
 available if the route has a `module` property, which is automatic for routes defined by modules.
 
 For more information continue to the [View documentation](https://github.com/ICanBoogie/View#views-and-controllers).
@@ -122,3 +124,7 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 [icanboogie/render]: https://github.com/ICanBoogie/Render
 [icanboogie/view]: https://github.com/ICanBoogie/View
 [ICanBoogie]: https://github.com/ICanBoogie/ICanBoogie
+
+[View]:                      http://api.icanboogie.org/view/0.8/class-ICanBoogie.View.View.html
+[Renderer]:                  http://api.icanboogie.org/render/0.5/class-ICanBoogie.Render.Renderer.html
+[`get_renderer()`]:          http://api.icanboogie.org/render/0.5/function-ICanBoogie.Render.get_renderer.html
