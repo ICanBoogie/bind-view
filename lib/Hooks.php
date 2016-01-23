@@ -32,31 +32,11 @@ class Hooks
 	 */
 	static public function controller_get_view(Controller $controller)
 	{
-		$view = new View($controller);
+		$view = new View($controller, Render\get_renderer());
 
 		new View\AlterEvent($view);
 
 		return $view;
-	}
-
-	/**
-	 * Returns the shared engine collection.
-	 *
-	 * @return Render\EngineCollection
-	 */
-	static public function view_lazy_get_engines()
-	{
-		return Render\get_engines();
-	}
-
-	/**
-	 * Returns a clone of the shared template resolver.
-	 *
-	 * @return Render\TemplateResolver
-	 */
-	static public function view_lazy_get_template_resolver()
-	{
-		return clone Render\get_template_resolver();
 	}
 
 	/**

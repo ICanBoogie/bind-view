@@ -36,34 +36,6 @@ class HooksTest extends \PHPUnit_Framework_TestCase
 		$this->assertSame($view, $controller->view);
 	}
 
-	public function test_view_get_engines()
-	{
-		$view = $this
-			->getMockBuilder(View::class)
-			->disableOriginalConstructor()
-			->setMethods([])
-			->getMockForAbstractClass();
-
-		/* @var $view View */
-		$engines = $view->engines;
-		$this->assertInstanceOf(EngineCollection::class, $engines);
-		$this->assertSame($engines, $view->engines);
-	}
-
-	public function test_view_get_template_resolver()
-	{
-		$view = $this
-			->getMockBuilder(View::class)
-			->disableOriginalConstructor()
-			->setMethods([])
-			->getMockForAbstractClass();
-
-		/* @var $view View */
-		$template_resolver = $view->template_resolver;
-		$this->assertInstanceOf(TemplateResolver::class, $template_resolver);
-		$this->assertSame($template_resolver, $view->template_resolver);
-	}
-
 	/**
 	 * @expectedException \ICanBoogie\PropertyNotDefined
 	 */

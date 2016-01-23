@@ -1,7 +1,7 @@
 # customization
 
 PACKAGE_NAME = icanboogie/bind-view
-PACKAGE_VERSION = 0.7.0
+PACKAGE_VERSION = 0.8.0
 
 # do not edit the following lines
 

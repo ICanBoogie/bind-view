@@ -13,7 +13,5 @@ return [
 	ICanBoogie\Routing\Controller::class . '::get_layout' => $hooks . 'get_layout',
 	ICanBoogie\Routing\Route::class . '::lazy_get_template' => $hooks . 'get_template',
 	ICanBoogie\Routing\Route::class . '::lazy_get_layout' => $hooks . 'get_layout',
-	ICanBoogie\View\View::class . '::lazy_get_engines' => $hooks . 'view_lazy_get_engines',
-	ICanBoogie\View\View::class . '::lazy_get_template_resolver' => $hooks . 'view_lazy_get_template_resolver',
 
 ];

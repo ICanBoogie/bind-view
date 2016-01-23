@@ -25,7 +25,7 @@
 		"php": ">=5.5.0",
 		"icanboogie/icanboogie": "^3.0.0",
 		"icanboogie/bind-render": "^0.5.0",
-		"icanboogie/view": "^0.7.0"
+		"icanboogie/view": "^0.8.0"
 	},
 
 	"autoload": {
