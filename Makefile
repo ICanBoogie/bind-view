@@ -1,7 +1,7 @@
 # customization
 
 PACKAGE_NAME = icanboogie/bind-view
-PACKAGE_VERSION = 0.8.0
+PACKAGE_VERSION = 0.9.0
 
 # do not edit the following lines
 
@@ -9,10 +9,10 @@ usage:
 	@echo "test:  Runs the test suite.\ndoc:   Creates the documentation.\nclean: Removes the documentation, the dependencies and the Composer files."
 
 vendor:
-	@composer install
+	@COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer install --prefer-dist
 
 update:
-	@composer update
+	@COMPOSER_ROOT_VERSION=$(PACKAGE_VERSION) composer update --prefer-dist
 
 autoload: vendor
 	@composer dump-autoload
@@ -29,7 +29,7 @@ doc: vendor
 	@apigen generate \
 	--source lib \
 	--destination build/docs/ \
-	--title "$(PACKAGE_NAME) $(PACKAGE_VERSION)" \
+	--title "$(PACKAGE_NAME) v$(PACKAGE_VERSION)" \
 	--template-theme "bootstrap"
 
 clean:

@@ -61,7 +61,7 @@ For more information continue to the [View documentation](https://github.com/ICa
 
 ## Requirements
 
-The package requires PHP 5.5 or later.
+The package requires PHP 5.6 or later.
 
 
 
@@ -125,6 +125,6 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 [icanboogie/view]: https://github.com/ICanBoogie/View
 [ICanBoogie]: https://github.com/ICanBoogie/ICanBoogie
 
-[View]:                      http://api.icanboogie.org/view/0.8/class-ICanBoogie.View.View.html
-[Renderer]:                  http://api.icanboogie.org/render/0.5/class-ICanBoogie.Render.Renderer.html
-[`get_renderer()`]:          http://api.icanboogie.org/render/0.5/function-ICanBoogie.Render.get_renderer.html
+[View]:                      http://api.icanboogie.org/view/0.9/class-ICanBoogie.View.View.html
+[Renderer]:                  http://api.icanboogie.org/render/0.6/class-ICanBoogie.Render.Renderer.html
+[`get_renderer()`]:          http://api.icanboogie.org/render/0.6/function-ICanBoogie.Render.get_renderer.html

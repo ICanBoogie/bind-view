@@ -22,10 +22,10 @@
 	"minimum-stability": "dev",
 
 	"require": {
-		"php": ">=5.5.0",
-		"icanboogie/icanboogie": "^3.0.0",
-		"icanboogie/bind-render": "^0.5.0",
-		"icanboogie/view": "^0.8.0"
+		"php": ">=5.6",
+		"icanboogie/icanboogie": "^4.0",
+		"icanboogie/bind-render": "^0.6",
+		"icanboogie/view": "^0.9"
 	},
 
 	"autoload": {
