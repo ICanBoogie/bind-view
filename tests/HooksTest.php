@@ -12,9 +12,6 @@
 namespace ICanBoogie\Bindings\View;
 
 use ICanBoogie\Binding\View\Hooks;
-use ICanBoogie\Render\EngineCollection;
-use ICanBoogie\Render\EngineCollectionTest;
-use ICanBoogie\Render\TemplateResolver;
 use ICanBoogie\Routing\Controller;
 use ICanBoogie\Routing\Route;
 use ICanBoogie\View\ControllerBindings;

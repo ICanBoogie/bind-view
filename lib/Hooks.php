@@ -13,7 +13,6 @@ namespace ICanBoogie\Binding\View;
 
 use ICanBoogie\PropertyNotDefined;
 use ICanBoogie\Render;
-use ICanBoogie\Render\TemplateResolver;
 use ICanBoogie\Routing\Controller;
 use ICanBoogie\View\View;
 
