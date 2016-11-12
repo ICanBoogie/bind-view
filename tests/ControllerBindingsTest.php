@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Bindings\View;
+namespace ICanBoogie\Binding\View;
 
-use ICanBoogie\Bindings\View\ControllerBindingsTest\BoundController;
-use ICanBoogie\Bindings\View\ControllerBindingsTest\BoundControllerWithLayout;
-use ICanBoogie\Bindings\View\ControllerBindingsTest\BoundControllerWithTemplate;
+use ICanBoogie\Binding\View\ControllerBindingsTest\BoundController;
+use ICanBoogie\Binding\View\ControllerBindingsTest\BoundControllerWithLayout;
+use ICanBoogie\Binding\View\ControllerBindingsTest\BoundControllerWithTemplate;
 use ICanBoogie\View\View;
 
 class ControllerBindingsTest extends \PHPUnit_Framework_TestCase

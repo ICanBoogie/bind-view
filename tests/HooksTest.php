@@ -9,9 +9,8 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Bindings\View;
+namespace ICanBoogie\Binding\View;
 
-use ICanBoogie\Binding\View\Hooks;
 use ICanBoogie\Routing\Controller;
 use ICanBoogie\Routing\Route;
 use ICanBoogie\View\ControllerBindings;

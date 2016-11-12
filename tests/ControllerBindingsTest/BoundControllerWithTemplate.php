@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace ICanBoogie\Bindings\View\ControllerBindingsTest;
+namespace ICanBoogie\Binding\View\ControllerBindingsTest;
 
 use ICanBoogie\Routing\Controller;
 use ICanBoogie\View\ControllerBindings as ViewBindings;
