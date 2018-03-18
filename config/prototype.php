@@ -6,6 +6,11 @@ use ICanBoogie;
 
 $hooks = Hooks::class . '::';
 
+/**
+ * @uses Hooks::controller_get_view()
+ * @uses Hooks::get_template()
+ * @uses Hooks::get_layout()
+ */
 return [
 
 	ICanBoogie\Routing\Controller::class . '::lazy_get_view' => $hooks . 'controller_get_view',

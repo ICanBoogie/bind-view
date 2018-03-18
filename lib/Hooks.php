@@ -24,12 +24,8 @@ class Hooks
 
 	/**
 	 * Returns a view for a controller.
-	 *
-	 * @param Controller $controller
-	 *
-	 * @return View
 	 */
-	static public function controller_get_view(Controller $controller)
+	static public function controller_get_view(Controller $controller): View
 	{
 		$view = new View($controller, Render\get_renderer());
 
@@ -42,11 +38,9 @@ class Hooks
 	 * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
 	 * define a `template` property.
 	 *
-	 * @param $target
-	 *
 	 * @throws PropertyNotDefined
 	 */
-	static public function get_template($target)
+	static public function get_template(object $target): void
 	{
 		throw new PropertyNotDefined([ 'template', $target ]);
 	}
@@ -55,11 +49,9 @@ class Hooks
 	 * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
 	 * define a `layout` property.
 	 *
-	 * @param $target
-	 *
 	 * @throws PropertyNotDefined
 	 */
-	static public function get_layout($target)
+	static public function get_layout(object $target): void
 	{
 		throw new PropertyNotDefined([ 'layout', $target ]);
 	}

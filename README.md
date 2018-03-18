@@ -1,9 +1,9 @@
 # bind-view
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-view/master.svg)](http://travis-ci.org/ICanBoogie/bind-view)
-[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-view/master.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-view)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view/master.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
+[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-view.svg)](http://travis-ci.org/ICanBoogie/bind-view)
+[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-view.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-view)
+[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
 [![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
 
 The **icanboogie/bind-view** package binds [icanboogie/view][] to [ICanBoogie][], using its
@@ -60,7 +60,7 @@ For more information continue to the [View documentation](https://github.com/ICa
 
 ## Requirements
 
-The package requires PHP 5.6 or later.
+The package requires PHP 7.2 or later.
 
 
 
@@ -104,8 +104,8 @@ The test suite is ran with the `make test` command. [PHPUnit](https://phpunit.de
 
 The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-view/master.svg)](https://travis-ci.org/ICanBoogie/bind-view)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view/master.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
+[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-view.svg)](https://travis-ci.org/ICanBoogie/bind-view)
+[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
 
 
 
@@ -124,6 +124,6 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 [icanboogie/view]: https://github.com/ICanBoogie/View
 [ICanBoogie]: https://github.com/ICanBoogie/ICanBoogie
 
-[View]:                      https://icanboogie.org/api/view/0.9/class-ICanBoogie.View.View.html
-[Renderer]:                  https://icanboogie.org/api/render/0.6/class-ICanBoogie.Render.Renderer.html
-[`get_renderer()`]:          https://icanboogie.org/api/render/0.6/function-ICanBoogie.Render.get_renderer.html
+[View]:                      https://icanboogie.org/api/view/0.10/class-ICanBoogie.View.View.html
+[Renderer]:                  https://icanboogie.org/api/render/0.7/class-ICanBoogie.Render.Renderer.html
+[`get_renderer()`]:          https://icanboogie.org/api/render/0.7/function-ICanBoogie.Render.get_renderer.html

@@ -14,9 +14,11 @@ namespace ICanBoogie\Binding\View;
 use ICanBoogie\Binding\View\ControllerBindingsTest\BoundController;
 use ICanBoogie\Binding\View\ControllerBindingsTest\BoundControllerWithLayout;
 use ICanBoogie\Binding\View\ControllerBindingsTest\BoundControllerWithTemplate;
+use ICanBoogie\PropertyNotDefined;
 use ICanBoogie\View\View;
+use PHPUnit\Framework\TestCase;
 
-class ControllerBindingsTest extends \PHPUnit\Framework\TestCase
+class ControllerBindingsTest extends TestCase
 {
 	public function test_view()
 	{
@@ -34,9 +36,6 @@ class ControllerBindingsTest extends \PHPUnit\Framework\TestCase
 		$this->assertObjectHasAttribute('view', $controller);
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\PropertyNotDefined
-	 */
 	public function test_template()
 	{
 		$controller = $this
@@ -45,12 +44,10 @@ class ControllerBindingsTest extends \PHPUnit\Framework\TestCase
 
 		/* @var $controller BoundController */
 
+		$this->expectException(PropertyNotDefined::class);
 		$controller->template;
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\PropertyNotDefined
-	 */
 	public function test_layout()
 	{
 		$controller = $this
@@ -59,6 +56,7 @@ class ControllerBindingsTest extends \PHPUnit\Framework\TestCase
 
 		/* @var $controller BoundController */
 
+		$this->expectException(PropertyNotDefined::class);
 		$controller->layout;
 	}
 

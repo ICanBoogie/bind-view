@@ -1,8 +1,8 @@
 # customization
 
 PACKAGE_NAME = icanboogie/bind-view
-PACKAGE_VERSION = 0.9
-PHPUNIT_VERSION = phpunit-5.phar
+PACKAGE_VERSION = 5.0
+PHPUNIT_VERSION = phpunit-8.phar
 PHPUNIT_FILENAME = build/$(PHPUNIT_VERSION)
 PHPUNIT = php $(PHPUNIT_FILENAME)
 

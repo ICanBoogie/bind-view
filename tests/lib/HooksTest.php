@@ -11,12 +11,14 @@
 
 namespace ICanBoogie\Binding\View;
 
+use ICanBoogie\PropertyNotDefined;
 use ICanBoogie\Routing\Controller;
 use ICanBoogie\Routing\Route;
 use ICanBoogie\View\ControllerBindings;
 use ICanBoogie\View\View;
+use PHPUnit\Framework\TestCase;
 
-class HooksTest extends \PHPUnit\Framework\TestCase
+class HooksTest extends TestCase
 {
 	public function test_controller_get_view()
 	{
@@ -32,9 +34,6 @@ class HooksTest extends \PHPUnit\Framework\TestCase
 		$this->assertSame($view, $controller->view);
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\PropertyNotDefined
-	 */
 	public function test_get_template()
 	{
 		$target = $this
@@ -42,12 +41,10 @@ class HooksTest extends \PHPUnit\Framework\TestCase
 			->disableOriginalConstructor()
 			->getMock();
 
+		$this->expectException(PropertyNotDefined::class);
 		Hooks::get_template($target);
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\PropertyNotDefined
-	 */
 	public function test_get_layout()
 	{
 		$target = $this
@@ -55,6 +52,7 @@ class HooksTest extends \PHPUnit\Framework\TestCase
 			->disableOriginalConstructor()
 			->getMock();
 
+		$this->expectException(PropertyNotDefined::class);
 		Hooks::get_layout($target);
 	}
 }
