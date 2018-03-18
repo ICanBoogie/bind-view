@@ -93,7 +93,7 @@ cloned with the following command line:
 ## Documentation
 
 The package is documented as part of the [ICanBoogie][] framework
-[documentation](http://icanboogie.org/docs/). You can generate the documentation for the package and its dependencies with the `make doc` command. The documentation is generated in the `build/docs` directory. [ApiGen](http://apigen.org/) is required. The directory can later be cleaned with the `make clean` command.
+[documentation](https://icanboogie.org/docs/). You can generate the documentation for the package and its dependencies with the `make doc` command. The documentation is generated in the `build/docs` directory. [ApiGen](http://apigen.org/) is required. The directory can later be cleaned with the `make clean` command.
 
 
 
@@ -125,6 +125,6 @@ The package is continuously tested by [Travis CI](http://about.travis-ci.org/).
 [icanboogie/view]: https://github.com/ICanBoogie/View
 [ICanBoogie]: https://github.com/ICanBoogie/ICanBoogie
 
-[View]:                      http://api.icanboogie.org/view/0.9/class-ICanBoogie.View.View.html
-[Renderer]:                  http://api.icanboogie.org/render/0.6/class-ICanBoogie.Render.Renderer.html
-[`get_renderer()`]:          http://api.icanboogie.org/render/0.6/function-ICanBoogie.Render.get_renderer.html
+[View]:                      https://icanboogie.org/api/view/0.9/class-ICanBoogie.View.View.html
+[Renderer]:                  https://icanboogie.org/api/render/0.6/class-ICanBoogie.Render.Renderer.html
+[`get_renderer()`]:          https://icanboogie.org/api/render/0.6/function-ICanBoogie.Render.get_renderer.html

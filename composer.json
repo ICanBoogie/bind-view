@@ -2,48 +2,45 @@
 	"name": "icanboogie/bind-view",
 	"type": "library",
 	"description": "Binds icanboogie/view to ICanBoogie",
-	"homepage": "http://icanboogie.org/",
+	"homepage": "https://icanboogie.org/",
 	"license": "BSD-3-Clause",
-
 	"authors": [
 		{
 			"name": "Olivier Laviale",
 			"email": "olivier.laviale@gmail.com",
-			"homepage": "http://www.weirdog.com/",
-			"role" : "Developer"
+			"homepage": "https://olvlvl.com/",
+			"role": "Developer"
 		}
 	],
-
 	"support": {
 		"issues": "https://github.com/ICanBoogie/bind-view/issues",
 		"source": "https://github.com/ICanBoogie/bind-view"
 	},
-
 	"minimum-stability": "dev",
-
+	"prefer-dist": true,
+	"prefer-stable": true,
 	"require": {
 		"php": ">=5.6",
 		"icanboogie/icanboogie": "^4.0",
 		"icanboogie/bind-render": "^0.6",
 		"icanboogie/view": "^0.9"
 	},
-
 	"autoload": {
 		"psr-4": {
 			"ICanBoogie\\Binding\\View\\": "lib"
 		}
 	},
-
 	"autoload-dev": {
 		"psr-4": {
-			"ICanBoogie\\Binding\\View\\": "tests"
-		}
+			"ICanBoogie\\Binding\\View\\": "tests/lib"
+		},
+		"classmap": [
+			"tests/Application.php"
+		]
 	},
-
 	"scripts": {
 		"post-autoload-dump": "ICanBoogie\\Autoconfig\\Hooks::on_autoload_dump"
 	},
-
 	"extra": {
 		"icanboogie": {
 			"config-path": "config"
