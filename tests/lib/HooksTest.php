@@ -16,7 +16,7 @@ use ICanBoogie\Routing\Route;
 use ICanBoogie\View\ControllerBindings;
 use ICanBoogie\View\View;
 
-class HooksTest extends \PHPUnit_Framework_TestCase
+class HooksTest extends \PHPUnit\Framework\TestCase
 {
 	public function test_controller_get_view()
 	{

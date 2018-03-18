@@ -16,7 +16,7 @@ use ICanBoogie\Binding\View\ControllerBindingsTest\BoundControllerWithLayout;
 use ICanBoogie\Binding\View\ControllerBindingsTest\BoundControllerWithTemplate;
 use ICanBoogie\View\View;
 
-class ControllerBindingsTest extends \PHPUnit_Framework_TestCase
+class ControllerBindingsTest extends \PHPUnit\Framework\TestCase
 {
 	public function test_view()
 	{
