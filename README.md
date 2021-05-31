@@ -1,7 +1,7 @@
 # bind-view
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
-[![Build Status](https://img.shields.io/travis/ICanBoogie/bind-view.svg)](http://travis-ci.org/ICanBoogie/bind-view)
+[![Build Status](https://img.shields.io/github/workflow/status/ICanBoogie/bind-view/test)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Atest)
 [![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-view.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-view)
 [![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
 [![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
@@ -33,13 +33,13 @@ use ICanBoogie\Routing\Controller;
 
 class ArticlesController extends Controller
 {
-	use Controller\ResourceTrait;
+    use Controller\ResourceTrait;
 
-	protected function index()
-	{
-		$this->view->content = $this->model->own->visible->ordered->limit(10);
-		$this->view['title'] = "Ten last articles";
-	}
+    protected function index()
+    {
+        $this->view->content = $this->model->own->visible->ordered->limit(10);
+        $this->view['title'] = "Ten last articles";
+    }
 }
 ```
 
