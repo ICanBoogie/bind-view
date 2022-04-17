@@ -12,9 +12,10 @@
 namespace ICanBoogie\Binding\View\ControllerBindingsTest;
 
 use ICanBoogie\Routing\Controller;
+use ICanBoogie\Routing\ControllerAbstract;
 use ICanBoogie\View\ControllerBindings as ViewBindings;
 
-abstract class BoundControllerWithLayout extends Controller
+abstract class BoundControllerWithLayout extends ControllerAbstract
 {
 	use ViewBindings;
 

@@ -12,9 +12,11 @@
 namespace ICanBoogie\Binding\View;
 
 use ICanBoogie\PropertyNotDefined;
-use ICanBoogie\Render;
-use ICanBoogie\Routing\Controller;
+use ICanBoogie\Render\Renderer;
+use ICanBoogie\Routing\ControllerAbstract;
 use ICanBoogie\View\View;
+
+use function ICanBoogie\app;
 
 class Hooks
 {
@@ -25,9 +27,9 @@ class Hooks
 	/**
 	 * Returns a view for a controller.
 	 */
-	static public function controller_get_view(Controller $controller): View
+	static public function controller_get_view(ControllerAbstract $controller): View
 	{
-		$view = new View($controller, Render\get_renderer());
+		$view = new View($controller, app()->container->get(Renderer::class));
 
 		new View\AlterEvent($view);
 

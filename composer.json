@@ -22,13 +22,13 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"require": {
-		"php": ">=7.2",
-		"icanboogie/icanboogie": "^5.0",
-		"icanboogie/bind-render": "^5.0",
-		"icanboogie/view": "^0.10"
+		"php": ">=8.1",
+		"icanboogie/icanboogie": "^6.0",
+		"icanboogie/bind-render": "^6.0",
+		"icanboogie/view": "^6.0"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "^8.5"
+		"phpunit/phpunit": "^9.5"
 	},
 	"autoload": {
 		"psr-4": {

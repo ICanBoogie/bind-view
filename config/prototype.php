@@ -13,10 +13,12 @@ $hooks = Hooks::class . '::';
  */
 return [
 
-	ICanBoogie\Routing\Controller::class . '::lazy_get_view' => $hooks . 'controller_get_view',
-	ICanBoogie\Routing\Controller::class . '::get_template' => $hooks . 'get_template',
-	ICanBoogie\Routing\Controller::class . '::get_layout' => $hooks . 'get_layout',
+	ICanBoogie\Routing\ControllerAbstract::class . '::lazy_get_view' => $hooks . 'controller_get_view',
+	ICanBoogie\Routing\ControllerAbstract::class . '::get_template' => $hooks . 'get_template',
+	ICanBoogie\Routing\ControllerAbstract::class . '::get_layout' => $hooks . 'get_layout',
+	/** @deprecated */
 	ICanBoogie\Routing\Route::class . '::lazy_get_template' => $hooks . 'get_template',
+	/** @deprecated */
 	ICanBoogie\Routing\Route::class . '::lazy_get_layout' => $hooks . 'get_layout',
 
 ];

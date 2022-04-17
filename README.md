@@ -58,14 +58,6 @@ For more information continue to the [View documentation](https://github.com/ICa
 
 
 
-## Requirements
-
-The package requires PHP 7.2 or later.
-
-
-
-
-
 ## Installation
 
 ```bash
