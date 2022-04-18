@@ -17,8 +17,9 @@ use ICanBoogie\Routing\ControllerAbstract;
 use ICanBoogie\View\View;
 
 use function ICanBoogie\app;
+use function ICanBoogie\emit;
 
-class Hooks
+final class Hooks
 {
 	/*
 	 * Prototypes
@@ -31,7 +32,7 @@ class Hooks
 	{
 		$view = new View($controller, app()->container->get(Renderer::class));
 
-		new View\AlterEvent($view);
+		emit(new View\AlterEvent($view));
 
 		return $view;
 	}

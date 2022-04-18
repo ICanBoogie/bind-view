@@ -11,53 +11,53 @@
 
 namespace ICanBoogie\Binding\View;
 
+use ICanBoogie\HTTP\Request;
 use ICanBoogie\PropertyNotDefined;
-use ICanBoogie\Routing\Controller;
 use ICanBoogie\Routing\ControllerAbstract;
-use ICanBoogie\Routing\Route;
 use ICanBoogie\View\ControllerBindings;
 use ICanBoogie\View\View;
+use LogicException;
 use PHPUnit\Framework\TestCase;
 
 class HooksTest extends TestCase
 {
-	public function test_controller_get_view()
-	{
-		$controller = $this
-			->getMockBuilder(ControllerAbstract::class)
-			->disableOriginalConstructor()
-			->setMethods([])
-			->getMockForAbstractClass();
+	/**
+	 * @var ControllerAbstract&ControllerBindings;
+	 */
+	private ControllerAbstract $controller;
 
-		/* @var $controller ControllerAbstract|ControllerBindings */
-		$view = $controller->view;
+	protected function setUp(): void
+	{
+		parent::setUp();
+
+		$this->controller = new class () extends ControllerAbstract
+		{
+			use ControllerBindings;
+
+			protected function action(Request $request): mixed
+			{
+				throw new LogicException();
+			}
+		};
+
+	}
+
+	public function test_controller_get_view(): void
+	{
+		$view = $this->controller->view;
 		$this->assertInstanceOf(View::class, $view);
-		$this->assertSame($view, $controller->view);
+		$this->assertSame($view, $this->controller->view);
 	}
 
-	public function test_get_template()
+	public function test_controller_get_template(): void
 	{
-		$this->markTestSkipped();
-
-		$target = $this
-			->getMockBuilder('ICanBoogie\Routing\Route')
-			->disableOriginalConstructor()
-			->getMock();
-
 		$this->expectException(PropertyNotDefined::class);
-		Hooks::get_template($target);
+		$this->assertNull($this->controller->template);
 	}
 
-	public function test_get_layout()
+	public function test_controller_get_layout(): void
 	{
-		$this->markTestSkipped();
-
-		$target = $this
-			->getMockBuilder(Route::class)
-			->disableOriginalConstructor()
-			->getMock();
-
 		$this->expectException(PropertyNotDefined::class);
-		Hooks::get_layout($target);
+		$this->assertNull($this->controller->layout);
 	}
 }

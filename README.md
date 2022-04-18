@@ -21,7 +21,8 @@ Views are associated with controllers through the lazy getter `view`, thus a sim
 is all that is required to enable view features inside a controller. The view then waits for
 the `Controller::action` event to perform its rendering.
 
-The [View][] instance is created with the controller and the [Renderer][] instance returned by [`get_renderer()`][].
+The [View][] instance is created with the controller and the [Renderer][] instance obtained from the
+container.
 
 The following example demonstrates how a query of some articles is set as the view content,
 a title is also added to the view variables:
@@ -102,4 +103,3 @@ test suite. Alternatively, run `make test-coverage` to run the test suite with t
 
 [View]:                      https://icanboogie.org/api/view/0.10/class-ICanBoogie.View.View.html
 [Renderer]:                  https://icanboogie.org/api/render/0.7/class-ICanBoogie.Render.Renderer.html
-[`get_renderer()`]:          https://icanboogie.org/api/render/0.7/function-ICanBoogie.Render.get_renderer.html
