@@ -1,10 +1,9 @@
 # bind-view
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
-[![Build Status](https://img.shields.io/github/workflow/status/ICanBoogie/bind-view/test)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Atest)
 [![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-view.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-view)
 [![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
-[![Packagist](https://img.shields.io/packagist/dt/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
+[![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
 
 The **icanboogie/bind-view** package binds [icanboogie/view][] to [ICanBoogie][], using its
 autoconfig feature. It add getters to controllers and views, making it easy to invoke views from
@@ -12,6 +11,12 @@ controller actions or obtain template engines and resolve templates from views, 
 of [icanboogie/render][].
 
 
+
+#### Installation
+
+```bash
+composer require icanboogie/bind-view
+```
 
 
 
@@ -57,42 +62,32 @@ For more information continue to the [View documentation](https://github.com/ICa
 
 
 
+## Continuous Integration
 
+The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bind-view/actions).
 
-## Installation
-
-```bash
-composer require icanboogie/bind-view
-```
-
-
-
-
-
-## Documentation
-
-The package is documented as part of the [ICanBoogie][] framework
-[documentation](https://icanboogie.org/docs/). You can generate the documentation for the package and its dependencies with the `make doc` command. The documentation is generated in the `build/docs` directory. [ApiGen](http://apigen.org/) is required. The directory can later be cleaned with the `make clean` command.
+[![Tests](https://github.com/ICanBoogie/bind-view/workflows/test/badge.svg?branch=master)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Atest)
+[![Static Analysis](https://github.com/ICanBoogie/bind-view/workflows/static-analysis/badge.svg?branch=master)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Astatic-analysis)
+[![Code Style](https://github.com/ICanBoogie/bind-view/workflows/code-style/badge.svg?branch=master)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Acode-style)
 
 
 
+## Code of Conduct
+
+This project adheres to a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
+this project and its community, you are expected to uphold this code.
 
 
-## Testing
 
-Run `make test-container` to create and log into the test container, then run `make test` to run the
-test suite. Alternatively, run `make test-coverage` to run the test suite with test coverage. Open
-`build/coverage/index.html` to see the breakdown of the code coverage.
+## Contributing
 
-
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 
 
 ## License
 
-**icanboogie/bind-view** is released under the [New BSD License](LICENSE).
-
-
+**icanboogie/bind-view** is released under the [BSD-3-Clause](LICENSE).
 
 
 

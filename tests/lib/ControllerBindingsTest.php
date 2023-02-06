@@ -20,65 +20,65 @@ use PHPUnit\Framework\TestCase;
 
 class ControllerBindingsTest extends TestCase
 {
-	public function test_view()
-	{
-		$controller = $this
-			->getMockBuilder(BoundController::class)
-			->disableOriginalConstructor()
-			->getMockForAbstractClass();
+    public function test_view()
+    {
+        $controller = $this
+            ->getMockBuilder(BoundController::class)
+            ->disableOriginalConstructor()
+            ->getMockForAbstractClass();
 
-		/* @var $controller BoundController */
+        /* @var $controller BoundController */
 
-		$view = $controller->view;
+        $view = $controller->view;
 
-		$this->assertInstanceOf(View::class, $view);
-		$this->assertSame($view, $controller->view);
-		$this->assertObjectHasAttribute('view', $controller);
-	}
+        $this->assertInstanceOf(View::class, $view);
+        $this->assertSame($view, $controller->view);
+        $this->assertObjectHasAttribute('view', $controller);
+    }
 
-	public function test_template()
-	{
-		$controller = $this
-			->getMockBuilder(BoundController::class)
-			->getMockForAbstractClass();
+    public function test_template()
+    {
+        $controller = $this
+            ->getMockBuilder(BoundController::class)
+            ->getMockForAbstractClass();
 
-		/* @var $controller BoundController */
+        /* @var $controller BoundController */
 
-		$this->expectException(PropertyNotDefined::class);
-		$controller->template;
-	}
+        $this->expectException(PropertyNotDefined::class);
+        $controller->template;
+    }
 
-	public function test_layout()
-	{
-		$controller = $this
-			->getMockBuilder(BoundController::class)
-			->getMockForAbstractClass();
+    public function test_layout()
+    {
+        $controller = $this
+            ->getMockBuilder(BoundController::class)
+            ->getMockForAbstractClass();
 
-		/* @var $controller BoundController */
+        /* @var $controller BoundController */
 
-		$this->expectException(PropertyNotDefined::class);
-		$controller->layout;
-	}
+        $this->expectException(PropertyNotDefined::class);
+        $controller->layout;
+    }
 
-	public function test_template_when_defined()
-	{
-		$controller = $this
-			->getMockBuilder(BoundControllerWithTemplate::class)
-			->getMockForAbstractClass();
+    public function test_template_when_defined()
+    {
+        $controller = $this
+            ->getMockBuilder(BoundControllerWithTemplate::class)
+            ->getMockForAbstractClass();
 
-		/* @var $controller BoundControllerWithTemplate */
+        /* @var $controller BoundControllerWithTemplate */
 
-		$this->assertEquals('my-template', $controller->template);
-	}
+        $this->assertEquals('my-template', $controller->template);
+    }
 
-	public function test_layout_when_defined()
-	{
-		$controller = $this
-			->getMockBuilder(BoundControllerWithLayout::class)
-			->getMockForAbstractClass();
+    public function test_layout_when_defined()
+    {
+        $controller = $this
+            ->getMockBuilder(BoundControllerWithLayout::class)
+            ->getMockForAbstractClass();
 
-		/* @var $controller BoundControllerWithLayout */
+        /* @var $controller BoundControllerWithLayout */
 
-		$this->assertEquals('my-layout', $controller->layout);
-	}
+        $this->assertEquals('my-layout', $controller->layout);
+    }
 }

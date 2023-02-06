@@ -21,41 +21,41 @@ use function ICanBoogie\emit;
 
 final class Hooks
 {
-	/*
-	 * Prototypes
-	 */
+    /*
+     * Prototypes
+     */
 
-	/**
-	 * Returns a view for a controller.
-	 */
-	static public function controller_get_view(ControllerAbstract $controller): View
-	{
-		$view = new View($controller, app()->container->get(Renderer::class));
+    /**
+     * Returns a view for a controller.
+     */
+    public static function controller_get_view(ControllerAbstract $controller): View
+    {
+        $view = new View($controller, app()->container->get(Renderer::class));
 
-		emit(new View\AlterEvent($view));
+        emit(new View\AlterEvent($view));
 
-		return $view;
-	}
+        return $view;
+    }
 
-	/**
-	 * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
-	 * define a `template` property.
-	 *
-	 * @throws PropertyNotDefined
-	 */
-	static public function get_template(object $target): void
-	{
-		throw new PropertyNotDefined([ 'template', $target ]);
-	}
+    /**
+     * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
+     * define a `template` property.
+     *
+     * @throws PropertyNotDefined
+     */
+    public static function get_template(object $target): void
+    {
+        throw new PropertyNotDefined([ 'template', $target ]);
+    }
 
-	/**
-	 * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
-	 * define a `layout` property.
-	 *
-	 * @throws PropertyNotDefined
-	 */
-	static public function get_layout(object $target): void
-	{
-		throw new PropertyNotDefined([ 'layout', $target ]);
-	}
+    /**
+     * Avoids a trip to `assert_property_is_readable` for controllers or routes that do not
+     * define a `layout` property.
+     *
+     * @throws PropertyNotDefined
+     */
+    public static function get_layout(object $target): void
+    {
+        throw new PropertyNotDefined([ 'layout', $target ]);
+    }
 }

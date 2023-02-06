@@ -17,10 +17,11 @@
 		"source": "https://github.com/ICanBoogie/bind-view"
 	},
 	"config": {
-		"sort-packages": true
+        "sort-packages": true
 	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
+	"prefer-dist": true,
 	"require": {
 		"php": ">=8.1",
 		"icanboogie/icanboogie": "^6.0",
@@ -28,6 +29,7 @@
 		"icanboogie/view": "^6.0"
 	},
 	"require-dev": {
+        "phpstan/phpstan": "^1.6",
 		"phpunit/phpunit": "^9.5"
 	},
 	"autoload": {

@@ -21,43 +21,41 @@ use PHPUnit\Framework\TestCase;
 
 class HooksTest extends TestCase
 {
-	/**
-	 * @var ControllerAbstract&ControllerBindings;
-	 */
-	private ControllerAbstract $controller;
+    /**
+     * @var ControllerAbstract&ControllerBindings;
+     */
+    private ControllerAbstract $controller;
 
-	protected function setUp(): void
-	{
-		parent::setUp();
+    protected function setUp(): void
+    {
+        parent::setUp();
 
-		$this->controller = new class () extends ControllerAbstract
-		{
-			use ControllerBindings;
+        $this->controller = new class () extends ControllerAbstract {
+            use ControllerBindings;
 
-			protected function action(Request $request): mixed
-			{
-				throw new LogicException();
-			}
-		};
+            protected function action(Request $request): mixed
+            {
+                throw new LogicException();
+            }
+        };
+    }
 
-	}
+    public function test_controller_get_view(): void
+    {
+        $view = $this->controller->view;
+        $this->assertInstanceOf(View::class, $view);
+        $this->assertSame($view, $this->controller->view);
+    }
 
-	public function test_controller_get_view(): void
-	{
-		$view = $this->controller->view;
-		$this->assertInstanceOf(View::class, $view);
-		$this->assertSame($view, $this->controller->view);
-	}
+    public function test_controller_get_template(): void
+    {
+        $this->expectException(PropertyNotDefined::class);
+        $this->assertNull($this->controller->template);
+    }
 
-	public function test_controller_get_template(): void
-	{
-		$this->expectException(PropertyNotDefined::class);
-		$this->assertNull($this->controller->template);
-	}
-
-	public function test_controller_get_layout(): void
-	{
-		$this->expectException(PropertyNotDefined::class);
-		$this->assertNull($this->controller->layout);
-	}
+    public function test_controller_get_layout(): void
+    {
+        $this->expectException(PropertyNotDefined::class);
+        $this->assertNull($this->controller->layout);
+    }
 }

@@ -16,5 +16,5 @@ use ICanBoogie\View\ControllerBindings as ViewBindings;
 
 abstract class BoundController extends ControllerAbstract
 {
-	use ViewBindings;
+    use ViewBindings;
 }
