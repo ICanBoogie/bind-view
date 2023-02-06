@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+
+  ICanBoogie\View\LayoutResolver:
+    class: ICanBoogie\View\LayoutResolver\Basic
+
+  ICanBoogie\View\ViewProvider:
+    class: ICanBoogie\View\ViewProvider\Basic

@@ -32,14 +32,9 @@
         "phpstan/phpstan": "^1.6",
 		"phpunit/phpunit": "^9.5"
 	},
-	"autoload": {
-		"psr-4": {
-			"ICanBoogie\\Binding\\View\\": "lib"
-		}
-	},
 	"autoload-dev": {
 		"psr-4": {
-			"ICanBoogie\\Binding\\View\\": "tests/lib"
+			"Test\\ICanBoogie\\Binding\\View\\": "tests/lib"
 		},
 		"classmap": [
 			"tests/Application.php"

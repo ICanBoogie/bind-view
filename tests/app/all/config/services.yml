@@ -1,0 +1,7 @@
+services:
+  _defaults:
+    autowire: true
+
+  Test\ICanBoogie\Binding\View\Acme\ArticleController:
+    public: true
+    shared: false
