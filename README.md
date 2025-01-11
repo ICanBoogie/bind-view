@@ -1,20 +1,19 @@
 # bind-view
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
-[![Code Quality](https://img.shields.io/scrutinizer/g/ICanBoogie/bind-view.svg)](https://scrutinizer-ci.com/g/ICanBoogie/bind-view)
-[![Code Coverage](https://img.shields.io/coveralls/ICanBoogie/bind-view.svg)](https://coveralls.io/r/ICanBoogie/bind-view)
+[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bind-view/badge.svg?branch=7.0)](https://coveralls.io/r/ICanBoogie/bind-view?branch=7.0)
 [![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
 
 The **icanboogie/bind-view** package binds [icanboogie/view][] to [ICanBoogie][], using its
-autoconfig feature. It add getters to controllers and views, making it easy to invoke views from
-controller actions or obtain template engines and resolve templates from views, using features
+autoconfig feature. It adds getters to controllers and views, making it easy to invoke views from
+controller actions or get template engines and resolve templates from views, using features
 of [icanboogie/render][].
 
 
 
 #### Installation
 
-```bash
+```shell
 composer require icanboogie/bind-view
 ```
 
@@ -66,28 +65,22 @@ For more information continue to the [View documentation](https://github.com/ICa
 
 The project is continuously tested by [GitHub actions](https://github.com/ICanBoogie/bind-view/actions).
 
-[![Tests](https://github.com/ICanBoogie/bind-view/workflows/test/badge.svg?branch=master)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Atest)
-[![Static Analysis](https://github.com/ICanBoogie/bind-view/workflows/static-analysis/badge.svg?branch=master)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Astatic-analysis)
-[![Code Style](https://github.com/ICanBoogie/bind-view/workflows/code-style/badge.svg?branch=master)](https://github.com/ICanBoogie/bind-view/actions?query=workflow%3Acode-style)
+[![Tests](https://github.com/ICanBoogie/bind-view/actions/workflows/test.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-view/actions/workflows/test.yml)
+[![Static Analysis](https://github.com/ICanBoogie/bind-view/actions/workflows/static-analysis.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-view/actions/workflows/static-analysis.yml)
+[![Code Style](https://github.com/ICanBoogie/bind-view/actions/workflows/code-style.yml/badge.svg?branch=7.0)](https://github.com/ICanBoogie/bind-view/actions/workflows/code-style.yml)
 
 
 
 ## Code of Conduct
 
 This project adheres to a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in
-this project and its community, you are expected to uphold this code.
+this project and its community, you're expected to uphold this code.
 
 
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-
-
-## License
-
-**icanboogie/bind-view** is released under the [BSD-3-Clause](LICENSE).
+See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 
 

@@ -1,51 +1,47 @@
 {
-	"name": "icanboogie/bind-view",
-	"type": "library",
-	"description": "Binds icanboogie/view to ICanBoogie",
-	"homepage": "https://icanboogie.org/",
-	"license": "BSD-3-Clause",
-	"authors": [
-		{
-			"name": "Olivier Laviale",
-			"email": "olivier.laviale@gmail.com",
-			"homepage": "https://olvlvl.com/",
-			"role": "Developer"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/ICanBoogie/bind-view/issues",
-		"source": "https://github.com/ICanBoogie/bind-view"
-	},
-	"config": {
-        "sort-packages": true
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"prefer-dist": true,
-	"require": {
-		"php": ">=8.1",
-		"icanboogie/icanboogie": "^6.0",
-		"icanboogie/bind-render": "^6.0",
-		"icanboogie/view": "^6.0"
-	},
-	"require-dev": {
-        "phpstan/phpstan": "^1.6",
-		"phpunit/phpunit": "^9.5"
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"Test\\ICanBoogie\\Binding\\View\\": "tests/lib"
-		},
-		"classmap": [
-			"tests/Application.php"
-		]
-	},
-	"scripts": {
-		"post-autoload-dump": "ICanBoogie\\Autoconfig\\Hooks::on_autoload_dump"
-	},
-	"extra": {
-		"icanboogie": {
-			"config-path": "config"
-		}
-	}
+  "name": "icanboogie/bind-view",
+  "type": "library",
+  "description": "Binds icanboogie/view to ICanBoogie",
+  "homepage": "https://icanboogie.org/",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Olivier Laviale",
+      "email": "olivier.laviale@gmail.com",
+      "homepage": "https://olvlvl.com/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/ICanBoogie/bind-view/issues",
+    "source": "https://github.com/ICanBoogie/bind-view"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "icanboogie/autoconfig": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=8.4",
+    "icanboogie/icanboogie": "^7.0",
+    "icanboogie/bind-render": "^7.0",
+    "icanboogie/view": "^7.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\ICanBoogie\\Binding\\View\\": "tests/lib"
+    }
+  },
+  "extra": {
+    "icanboogie": {
+      "config-path": "config"
+    }
+  }
 }
