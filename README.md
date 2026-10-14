@@ -1,7 +1,6 @@
 # bind-view
 
 [![Release](https://img.shields.io/packagist/v/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
-[![Code Coverage](https://coveralls.io/repos/github/ICanBoogie/bind-view/badge.svg?branch=7.0)](https://coveralls.io/r/ICanBoogie/bind-view?branch=7.0)
 [![Downloads](https://img.shields.io/packagist/dt/icanboogie/bind-view.svg)](https://packagist.org/packages/icanboogie/bind-view)
 
 The **icanboogie/bind-view** package binds [icanboogie/view][] to [ICanBoogie][], using its
